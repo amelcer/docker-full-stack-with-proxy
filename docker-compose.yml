@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  server:
+    build:
+      context: api
+    # ports:
+    #   - 6969:6969
+    networks:
+      - express-api-network
+
+  ui:
+    build:
+      context: front
+    ports:
+      - 8088:80
+    networks:
+      - express-api-network
+
+
+networks:
+  express-api-network:
