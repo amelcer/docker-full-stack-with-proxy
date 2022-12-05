@@ -4,8 +4,6 @@ services:
   server:
     build:
       context: api
-    # ports:
-    #   - 6969:6969
     networks:
       - express-api-network
 
